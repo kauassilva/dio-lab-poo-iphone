@@ -8,31 +8,31 @@ O desafio proposto se encontra no seguinte link: <a href="https://github.com/dig
 ```mermaid
 classDiagram
 
-  class Music {
-				+title : String
-				+artist : String
-				+album : String
-				+duration : Integer
-		}
+	class Music {
+		-title : String
+		-artist : String
+		-album : String
+		-duration : Integer
+	}
 	  class MusicPlayer {
-			  <<interface>>
-	      +play() void
-	      +pause() vod
-	      +selectMusic(music : Music) void
+	  	<<interface>>
+	      	play() void
+	      	pause() vod
+	      	selectMusic(music : Music) void
 	  }
 	  class TelephoneDevice {
-			  <<interface>>
-	      +call(number : String) void
-	      +answer() void
-	      +startVoiceMail() void
+		<<interface>>
+	      	call(number : String) void
+	      	answer() void
+	      	startVoiceMail() void
 	  }
 	  class InternetBrowser {
-			  <<interface>>
-	      +displayPage(url : String) void
-	      +addNewTab(url : String) void
-	      +refreshPage() void
+		<<interface>>
+	      	displayPage(url : String) void
+	      	addNewTab(url : String) void
+	      	refreshPage() void
 	  }
-	  
+  
 	  IPod --|> MusicPlayer
 	  IPod "1" o-- "*" Music
 	  
